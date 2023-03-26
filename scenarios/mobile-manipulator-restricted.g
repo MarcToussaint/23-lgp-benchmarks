@@ -18,8 +18,8 @@ joint1 (arm0) {
 }
 #.5
 
-cyl_col (joint1){ Q:<t (0 0 0) d(90 0 90  1)> shape:cylinder color:[1.0,0.5,0.5,1.0] size:[.18 .07] }
-cyl_noncol (joint1){ Q:<t (0 0 0) d(90 0 90  1)> shape:cylinder color:[.6,0.6,0.6,1.0] size:[.17 .081] }
+cyl_col (joint1){ Q:<t (0 0 0) d(90 0 90 1)> shape:cylinder color:[1.0,0.5,0.5,1.0] size:[.18 .07] }
+cyl_noncol (joint1){ Q:<t (0 0 0) d(90 0 90 1)> shape:cylinder color:[.6,0.6,0.6,1.0] size:[.17 .081] }
 
 arm1 (joint1){
     Q:<t (0 0 .4)> shape:capsule size:[.8 .06] }
@@ -31,8 +31,8 @@ joint2(arm1) {
     limits:[0 1.7]
 } 
 
-cyl2_col (joint2){ Q:<t (0 0 0) d(90 0 90  1)> shape:cylinder color:[1.0,0.5,0.5,1.0] size:[.141 .06] }
-cyl2_noncol (joint2){ Q:<t (0 0 0) d(90 0 90  1)> shape:cylinder color:[.6,0.6,0.6,1.0] size:[.14 .066] }
+cyl2_col (joint2){ Q:<t (0 0 0) d(90 0 90 1)> shape:cylinder color:[1.0,0.5,0.5,1.0] size:[.141 .06] }
+cyl2_noncol (joint2){ Q:<t (0 0 0) d(90 0 90 1)> shape:cylinder color:[.6,0.6,0.6,1.0] size:[.14 .066] }
 
 arm2(joint2){
     Q:<t (0 0 .2)> shape:capsule, size:[.4 .04] }
@@ -48,7 +48,7 @@ joint2a(arm2) {
 }
 
 #arm3(joint2c){
-#    shape:ssBox size:[.1  .1 .1 .01] }
+#    shape:ssBox size:[.1 .1 .1 .01] }
 
 gripper (joint2a){
     shape:sphere, size:[.03]
