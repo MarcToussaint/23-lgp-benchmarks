@@ -13,10 +13,10 @@ FOL_World{
 ## basic predicates
 is_gripper
 is_object
+is_place
 is_box
 is_sphere
 is_capsule
-is_goal
 
 ## predicates to help formulating rules
 on
@@ -55,7 +55,7 @@ REWARD {
 
 #####################################################################
 
-DecisionRule pick_object {
+DecisionRule pick {
   Obj, From, Hand, 
   { (is_gripper Hand) (is_object Obj) (on From Obj) (busy Hand)! (INFEASIBLE_pick Hand Obj)! }
   { (on From Obj)! (above Obj From)! (touch Obj From)! (stable From Obj)! (stableOn From Obj)!  #deletes
@@ -66,22 +66,12 @@ DecisionRule pick_object {
 
 #####################################################################
 
-DecisionRule place_object {
+DecisionRule place {
   Obj, Hand, To,
-  { (is_gripper Hand) (is_object Obj) (on Hand Obj) (is_box To) (busy Obj)! }
+  { (is_gripper Hand) (is_object Obj) (on Hand Obj) (is_place To) (busy Obj)! }
   { (busy Hand)! (on Hand Obj)! (stable Hand Obj)! (touch Hand Obj)! (movable Obj)!  #deletes
     (on To Obj)  #logic
     (stableOn To Obj)  #geometric
-    }
-}
-
-#####################################################################
-
-DecisionRule touch_goal {
-  Obj, Hand, Goal
-  { (is_gripper Hand) (is_object Obj) (is_goal Goal) (on Hand Obj) (busy Obj)! }
-  { (busy Hand)! (on Hand Obj)! (stable Hand Obj)! (touch Hand Obj)! (movable Obj)!  #deletes
-    (touch Goal Obj)  #geometric & logic
     }
 }
 

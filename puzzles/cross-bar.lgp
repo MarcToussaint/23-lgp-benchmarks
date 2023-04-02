@@ -1,16 +1,19 @@
-#conf: 'last.g'
-conf: 'icra2022-sg-3.g'
-fol: 'fol-puzzle-pnp.g'
-terminal: "(touch goal obj)"
-
-lifts: [none]
+fol: '../fol/pnp-byTouch.fol'
+terminal: "(on goal obj)"
 
 genericCollisions: false
+
+LGP/waypoint_w0: 5
+LGP/waypoint_wP: 2
 
 coll: [ego wall_right
 ego wall_left
 ego wall_front
 ego wall_back
+obj wall_right
+obj wall_left
+obj wall_front
+obj wall_back
 ego obj
 wall1_v obj
 wall2_h obj
