@@ -15,7 +15,7 @@ Prefix: "a0_"
 #Include: 'franka.g'
 Include: 'franka_vacuum.g'
 
-Edit a0_base (table) {Q:<t(-.4 -.3 .05) d(90 0 0 1)>}
+Edit a0_panda_base (table) {Q:<t(-.4 -.3 .05) d(90 0 0 1)>}
 
 goal (table_base){ type:ssBox, size:[0.3 0.3 0.01 .005], contact:0 Q:<[  -0.1, .1, -0.01, 1, 0, .0, .0]> color:[0.4, 1, 0.4, 0.3]}
 m (goal){ type:marker, size:[0.2], Q:<[  0, -0, 0., 1, 0, .0, 0]> color:[0.9, 0.1, 0.1, 1]}

@@ -15,13 +15,13 @@ Prefix: "a0_"
 #Include: 'franka.g'
 Include: 'franka_vacuum_restricted.g'
 
-Edit a0_base (table) {Q:<t(-.4 -.3 .05) d(90 0 0 1)>}
+Edit a0_panda_base (table) {Q:<t(-.4 -.3 .05) d(90 0 0 1)>}
 
 Prefix: "a1_"
 #Include: 'franka.g'
 Include: 'franka_vacuum_restricted.g'
 
-Edit a1_base (table) {Q:<t(.4 -.3 .05) d(90 0 0 1)>}
+Edit a1_panda_base (table) {Q:<t(.4 -.3 .05) d(90 0 0 1)>}
 
 goal1 (table_base){ type:ssBox, size:[0.2 0.2 0.1 .002], contact:0 Q:<[  0.4, .2, 0.03, 1, 0, .0, 0]> color:[0.4, 1, 1, 0.3]}
 goal2 (table_base){ type:ssBox, size:[0.1 0.2 0.1 .002], contact:0 Q:<[  0.4, .2, 0.156, 1, 0, .0, 0]> color:[0.4, 1, 0.4, 0.3]}
