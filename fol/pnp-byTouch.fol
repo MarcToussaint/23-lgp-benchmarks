@@ -14,6 +14,7 @@ FOL_World{
 is_gripper
 is_object
 is_place
+is_pose
 is_box
 is_sphere
 is_capsule
@@ -33,7 +34,7 @@ above
 touch
 impulse
 restingOn
-positionEq
+poseEq
 push_
 stable
 stableOn
@@ -72,6 +73,17 @@ DecisionRule place {
   { (busy Hand)! (on Hand Obj)! (stable Hand Obj)! (touch Hand Obj)! (movable Obj)!  #deletes
     (on To Obj)  #logic
     (stableOn To Obj)  #geometric
+    }
+}
+
+#####################################################################
+
+DecisionRule poseEq {
+  Obj, To,
+  { (movable Obj) (is_pose To) }
+  { #deletes
+    #logic
+    (poseEq To Obj)  #geometric
     }
 }
 
