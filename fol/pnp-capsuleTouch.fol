@@ -13,6 +13,8 @@ FOL_World{
 ## basic predicates
 is_gripper
 is_object
+is_place
+is_pose
 is_box
 is_sphere
 is_capsule
@@ -32,7 +34,7 @@ above
 touch
 impulse
 restingOn
-positionEq
+poseEq
 push_
 stable
 stableOn
@@ -100,7 +102,7 @@ DecisionRule end_push {
 
 DecisionRule place_capsule {
   Obj, Hand, To,
-  { (is_gripper Hand) (is_object Obj) (is_capsule Obj) (on Hand Obj) (is_object To) (is_box To) (busy Obj)! }
+  { (is_gripper Hand) (is_object Obj) (is_capsule Obj) (on Hand Obj) (is_place To) (is_box To) (busy Obj)! }
   { (busy Hand)! (on Hand Obj)! (stable Hand Obj)! (touch Hand Obj)! (movable Obj)!  #deletes
     (on To Obj)  #logic
     %(restingOn To Obj) (stable To Obj)  #geometric
@@ -115,6 +117,17 @@ BLOCKDecisionRule attach_sticks {
   { (busy Hand)! (on Hand Obj2)! (stable Hand Obj2)! (touch Hand Obj2)! (movable Obj2)!  #deletes
     (on Obj1 Obj2)  #logic
     %(restingOn  Floor  Obj2) (stable  Obj1 Obj2), %(touch Obj1 Obj2)  #geometric
+    }
+}
+
+#####################################################################
+
+DecisionRule poseEq {
+  Obj, To,
+  { (movable Obj) (is_pose To) }
+  { #deletes
+    #logic
+    (poseEq To Obj)  #geometric
     }
 }
 

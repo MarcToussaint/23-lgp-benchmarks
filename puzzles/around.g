@@ -24,6 +24,6 @@ block3(floor): { shape: ssBox, Q: [-.1, -.1, 0.15], size: [.2, .2, .2, .04], col
 block4(floor): { shape: ssBox, Q: [-.5, .7, 0.15], size: [1., .6, .2, .04], color: [.5], contact: 1 }
         
 base(world): { Q: [0, 0, .2] }
-ego(base): { joint: transXY, limits: [-.8, .8, -.8, .8], sampleUniform: 1., shape: ssCylinder, Q: [.2, .2, 0],  size: [.2, .24, .04], color: [0, 1, 1], contact: 1, logical: { is_gripper } }
-obj(floor): { joint: rigid, shape: ssCylinder, Q: [.7, .2, .15],  size: [.2, .24, .04], color: [1., .5, .0], contact: 1, logical:{ is_object } }
+ego(base): { joint: transXY, limits: [-.8, .8, -.8, .8], sampleUniform: 1., shape: ssCylinder, Q: [.2, .2, 0],  size: [.2, .2, .04], color: [0, 1, 1], contact: 1, logical: { is_gripper } }
+obj(floor): { joint: rigid, shape: ssCylinder, Q: [.7, .2, .15],  size: [.2, .2, .04], color: [1., .5, .0], contact: 1, logical:{ is_object } }
 goal(floor): { shape: ssBox, Q: [.2, .7, 0],  size: [.4, .4, .1, .04], color: [.5, 1., 0.], logical: { is_place } }
