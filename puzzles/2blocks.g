@@ -1,9 +1,9 @@
-Include: '_base-walls.g'
+Include: <_base-walls.g>
 
 base(world): { Q: [0, 0, .1] }
 
 ego(base) {
-    shape: ssCylinder, size: [.2, .2, .02], color: [0.96875, 0.7421875, 0.30859375], logical: {is_gripper}, limits: [-1.8, 1.8, -1.8, 1.8], sampleUniform: 1,
+    shape: ssCylinder, size: [.2, .2, .02], color: [0.96875, 0.7421875, 0.30859375], logical: {is_gripper}, limits: [-1.8, -1.8, 1.8, 1.8], sampleUniform: 1,
     joint: transXY, contact: 1
 }
 
@@ -26,4 +26,4 @@ obj(floor) {
 
 ### camera
 
-camera_gl(world): { Q: <t(0 0 30) d(180 0 0 1)> shape: camera width: 600 height: 600}
+camera_gl(world): { Q: "t(0 0 30) d(180 0 0 1)" shape: camera width: 600 height: 600}

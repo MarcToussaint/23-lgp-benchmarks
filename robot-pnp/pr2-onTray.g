@@ -132,7 +132,7 @@ r_gripper_l_finger_tip_link_1 (r_wrist_roll_joint) 	{  Q:[0.21106, 0.0247973, -0
 r_gripper_r_finger_tip_link_1 (r_wrist_roll_joint) 	{  Q:[0.21106, -0.0247973, 0.000126401, -1.03431e-13, 1, -1.42796e-29, -2.22045e-16], shape:mesh, color:[0.8, 0.8, 0.8], mesh:'/home/mtoussai/git/rai-robotModels/pr2/meshes/gripper_v0/l_finger_tip.ply', rel_includes_mesh_center }
 coll_hand_r (r_wrist_roll_joint) 	{  Q:[0.1556, 0, 0, 1, 0, 0, 0], shape:ssBox, size:[0.16, 0.12, 0.06, 0.025], color:[1, 1, 1, 0.2], contact:-2, coll_pr2 }
 r_gripper_frame (r_wrist_roll_joint) 	{  Q:[0.202929, -0.014047, -3.00398e-17, -1, -4.90654e-18, -1.52103e-16, 0], shape:marker, size:[0.1, 0, 0, 0], color:[0.8, 0.8, 0.8] }
-r_ft_sensor (r_wrist_roll_joint) 	{  Q:[0.0456, 0, 0, 0.579175, -0.405656, -0.579175, 0.405656], shape:cylinder, size:[0, 0, 0.0356, 0.02], color:[1, 0, 0] }
+r_ft_sensor (r_wrist_roll_joint) 	{  Q:[0.0456, 0, 0, 0.579175, -0.405656, -0.579175, 0.405656], shape:cylinder, size:[0.0356, 0.02], color:[1, 0, 0] }
 pr2R (r_wrist_roll_joint) 	{  Q:[0.2156, 0, -3.9968e-17, 0.5, 0.5, -0.5, -0.5], shape:ssBox, size:[0.03, 0.03, 0.05, 0.01], color:[1, 1, 0], logical:{ is_gripper } }
 r_gripper_l_finger_joint (r_wrist_roll_joint) 	{  Q:[0.11251, 0.01, 0, 0.706223, 0.0353406, -0.706223, 0.0353406], ctrl_limits:[0.5, 1000, 1], gripR }
 r_wrist_roll_link>r_gripper_l_finger_joint (r_wrist_roll_joint) 	{  Q:[0.11251, 0.01, 0, 0.707107, 0, -0.707107, 0] }
@@ -159,7 +159,7 @@ l_gripper_l_finger_tip_link_1 (l_wrist_roll_joint) 	{  Q:[0.21106, 0.0247973, -0
 l_gripper_r_finger_tip_link_1 (l_wrist_roll_joint) 	{  Q:[0.21106, -0.0247973, 0.000126401, -1.03431e-13, 1, -1.42796e-29, -2.22045e-16], shape:mesh, color:[0.8, 0.8, 0.8], mesh:'/home/mtoussai/git/rai-robotModels/pr2/meshes/gripper_v0/l_finger_tip.ply', rel_includes_mesh_center }
 coll_hand_l (l_wrist_roll_joint) 	{  Q:[0.1556, 0, 0, 1, 0, 0, 0], shape:ssBox, size:[0.16, 0.12, 0.06, 0.025], color:[1, 1, 1, 0.2], contact:-2, coll_pr2 }
 l_gripper_frame (l_wrist_roll_joint) 	{  Q:[0.202929, -0.014047, -3.00398e-17, -1, -4.90654e-18, -1.52103e-16, 0], shape:marker, size:[0.1, 0, 0, 0], color:[0.8, 0.8, 0.8] }
-l_ft_sensor (l_wrist_roll_joint) 	{  Q:[0.0456, 0, 0, 0.579175, -0.405656, -0.579175, 0.405656], shape:cylinder, size:[0, 0, 0.0356, 0.02], color:[1, 0, 0] }
+l_ft_sensor (l_wrist_roll_joint) 	{  Q:[0.0456, 0, 0, 0.579175, -0.405656, -0.579175, 0.405656], shape:cylinder, size:[0.0356, 0.02], color:[1, 0, 0] }
 pr2L (l_wrist_roll_joint) 	{  Q:[0.2156, 0, -3.9968e-17, 0.5, 0.5, -0.5, -0.5], shape:ssBox, size:[0.03, 0.03, 0.05, 0.01], color:[1, 1, 0], logical:{ is_gripper } }
 l_gripper_l_finger_joint (l_wrist_roll_joint) 	{  Q:[0.11251, 0.01, 0, 0.706223, 0.0353406, -0.706223, 0.0353406], ctrl_limits:[0.5, 1000, 1], gripL }
 l_wrist_roll_link>l_gripper_l_finger_joint (l_wrist_roll_joint) 	{  Q:[0.11251, 0.01, 0, 0.707107, 0, -0.707107, 0] }
