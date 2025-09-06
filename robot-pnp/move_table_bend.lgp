@@ -1,4 +1,4 @@
-fol: '../fol/pnp-byTouch.fol'
+fol: <../fol/pnp-byTouch.fol>
 terminal: "(poseEq goal table)"
 
 genericCollisions: true

@@ -23,6 +23,4 @@ obj(floor) {
     joint: rigid, friction: .1 contact: 1
 }
 
-### camera
-
-camera_gl(world): { Q: "t(0 0 30) d(180 0 0 1)" shape: camera width: 600 height: 600}
+camera_init: { X: [0 0 5 0 1 0 0], width: 400 height: 400, focalLength: 1, zRange: [.5, 10]}

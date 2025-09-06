@@ -1,4 +1,4 @@
-fol: '../fol/pnp-byTouch.fol'
+fol: <../fol/pnp-byTouch.fol>
 terminal: "(on goal obj)"
 
 genericCollisions: false
@@ -14,6 +14,7 @@ obj wall_right
 obj wall_left
 obj wall_front
 obj wall_back
+ego obj
 block1 wall_right
 block1 wall_left
 block1 wall_front
@@ -22,7 +23,6 @@ block2 wall_right
 block2 wall_left
 block2 wall_front
 block2 wall_back
-ego obj
 ego block1
 ego block2
 obj block1

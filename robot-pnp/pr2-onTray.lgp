@@ -1,4 +1,4 @@
-fol: '../fol/pnp-byTouch.fol'
+fol: <../fol/pnp-byTouch.fol>
 terminal: "(on tray obj0) (on tray obj1) (on tray obj2)"
 
 genericCollisions: true

@@ -34,3 +34,6 @@ _top (table_base){  type:ssBox, size:[2 0.05 0.1 .005], contact:1 Q: [  0.0, -1,
 _bottom (table_base){  type:ssBox, size:[2 0.05 0.1 .005], contact:1 Q: [  0.0, 1, 0.0, 1, 0, .0, .0] color:[0.4, 0.4, 0.4, 1]}
 _left (table_base){  type:ssBox, size:[0.05 2 0.1 .005], contact:1 Q: [  -1., -0, 0.0, 1, 0, .0, .0] color:[0.4, 0.4, 0.4, 1]}
 _right (table_base){  type:ssBox, size:[0.05 2 0.1 .005], contact:1 Q: [  1., -0, 0.0, 1, 0, .0, .0] color:[0.4, 0.4, 0.4, 1]}
+
+camera_init: { X: [0 0 3 0 1 0 0], width: 400 height: 400, focalLength: 1, zRange: [.5, 10]}
+

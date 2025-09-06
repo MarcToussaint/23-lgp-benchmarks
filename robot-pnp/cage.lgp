@@ -1,4 +1,4 @@
-fol: '../fol/pnp-capsuleTouch.fol'
+fol: <../fol/pnp-capsuleTouch.fol>
 terminal: "(poseEq goal obj)"
 
 genericCollisions: true

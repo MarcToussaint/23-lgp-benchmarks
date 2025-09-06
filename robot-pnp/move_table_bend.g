@@ -41,4 +41,4 @@ _floor (World){  type:ssBox, size:[12 12 0.1 .005], contact:1 Q: [ 0, 0, -0.06, 
 
 ### camera
 
-camera_gl(World): { Q: [10.8969, 35.8515, 36.9482, 0.0379987, 0.0994264, 0.381964, 0.918027] shape: camera width: 600 height: 600}
+camera_track: { X: [10, 2, 10, -0.21, 0.57, 0.72 -0.31], focalLength: 1.5, width: 600, height: 600}
